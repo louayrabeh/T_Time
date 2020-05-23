@@ -1,0 +1,70 @@
+<!--<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <mat-toolbar class="example-header" color="accent" style="height: 50px;">LOGO</mat-toolbar>
+      <mat-divider></mat-divider>
+    </mat-sidenav>
+   <mat-sidenav-content>-->
+<mat-toolbar class="header" style="height: 50px;">
+  <mat-icon aria-hidden="false" aria-label="icon">face</mat-icon>&emsp;User
+  <button mat-stroked-button color="accent" (click)="downloadPDF()"
+      style="right:16px;position: absolute;">
+      <mat-icon aria-hidden="false" aria-label="icon">power_settings_new</mat-icon> Logout
+    </button>
+</mat-toolbar>
+<mat-divider _ngcontent-ttx-c1="" class="mat-divider mat-divider-horizontal" style="background-color: #69f0ae;"
+  role="separator" aria-orientation="horizontal"></mat-divider>
+
+<div class="content" id="content">
+  <full-calendar id="calendar1" [weekends]="true" [eventLimit]="true" [events]="calendarEvents"
+    defaultView="dayGridMonth" [plugins]="calendarPlugins"></full-calendar>
+
+
+  <!--     <mat-grid-list cols="2" gutterSize="2rem">
+          <mat-grid-tile>
+            <mat-card >
+              <div class="card-content-valign">
+                <mat-card-title>
+                  Card
+                </mat-card-title>
+                <mat-card-content>
+                  card1 <br> <mat-slide-toggle (click)="clicked()">Slide me!</mat-slide-toggle>
+                </mat-card-content>
+              </div>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-card >
+              <div class="card-content-valign">
+                
+              </div>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-card >
+              <div class="card-content-valign">
+              <mat-card-title>
+                
+              </mat-card-title>
+              <mat-card-content>
+                card1
+              </mat-card-content>
+              </div>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-card >
+              <div class="card-content-valign">
+              <mat-card-title>
+                Card
+              </mat-card-title>
+              <mat-card-content>
+                card1
+              </mat-card-content>
+              </div>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>-->
+</div>
+<!--    </mat-sidenav-content>
+  </mat-sidenav-container>
+-->

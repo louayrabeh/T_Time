@@ -1,0 +1,21 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <mat-toolbar class="example-header" color="accent" style="height: 50px;text-align: center;">Time <b>Manager</b></mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <mat-list-item matLine routerLink="/analysemanager" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active-link">
+        <h2><mat-icon aria-hidden="false" aria-label="Example home icon">multiline_chart</mat-icon>Analyse</h2>
+      </mat-list-item>
+      <mat-list-item matLine routerLink="/ajoutprojet" routerLinkActive="active-link">
+        <h2><mat-icon aria-hidden="false" aria-label="Example home icon">playlist_add</mat-icon>Ajouter projet</h2>
+      </mat-list-item>
+      <mat-list-item matLine routerLink="/rendement" routerLinkActive="active-link">
+        <h2><mat-icon aria-hidden="false" aria-label="Example home icon">poll</mat-icon>Performance</h2>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-toolbar style="bottom:0%;position: absolute;"> <b>Dashboard</b>Manager</mat-toolbar>
+  </mat-sidenav>
+ <mat-sidenav-content>
+   <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

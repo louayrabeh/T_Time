@@ -1,0 +1,44 @@
+<h2 mat-dialog-title style="text-align: center;">{{data.title}}</h2>
+<form [formGroup]="myForm" (ngSubmit)="submitHandler()">
+  <mat-form-field color="accent" appearance="outline">
+    <mat-label>Nom tâche</mat-label>
+    <input matInput placeholder="Nom projet" name="nom" formControlName="name">
+  </mat-form-field><br>
+  <mat-form-field color="accent" appearance="outline">
+    <mat-label>Date début</mat-label>
+    <input matInput [matDatepicker]="pickerD" [min]="minDate" name="date_debut" formControlName="date_debut">
+    <mat-datepicker-toggle matSuffix [for]="pickerD"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #pickerD></mat-datepicker>
+  </mat-form-field><br>
+  <mat-form-field color="accent" appearance="outline">
+    <mat-label>Date fin</mat-label>
+    <input matInput [matDatepicker]="pickerF" [min]="minDate" name="date_fin" formControlName="date_fin">
+    <mat-datepicker-toggle matSuffix [for]="pickerF"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #pickerF></mat-datepicker>
+  </mat-form-field><br>
+  <mat-form-field color="accent" appearance="outline">
+    <mat-label>
+      Choisir Projet
+    </mat-label>
+    <mat-select (selectionChange)=changeRatio($event) name="projet"
+      formControlName="projet">
+      <mat-option *ngFor="let i of projet" value={{i}}>{{i}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field color="accent" appearance="outline">
+    <mat-label>
+      Choisir Sous-catégorie
+    </mat-label>
+    <mat-select (selectionChange)=changeRatio1($event) name="sous_categ"
+      formControlName="sous_categ">
+      <mat-option *ngFor="let i of sous_categ" value={{i}}>{{i}}</mat-option>
+    </mat-select><br>
+  </mat-form-field>
+  <mat-checkbox name="verrou"
+  formControlName="verrou">
+    Verrouillage
+  </mat-checkbox><br>
+  <button mat-raised-button color="accent" class="add-button">
+    Ajouter Tâche
+  </button>
+</form>

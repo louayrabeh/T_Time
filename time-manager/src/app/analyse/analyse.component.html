@@ -1,0 +1,27 @@
+<mat-toolbar class="header" style="height: 50px;">
+  <mat-icon aria-hidden="false" aria-label="icon">face</mat-icon>&emsp;User
+  <button mat-stroked-button color="accent" (click)="downloadPDF()"
+      style="right:16px;position: absolute;">
+      <mat-icon aria-hidden="false" aria-label="icon">power_settings_new</mat-icon> Logout
+    </button>
+</mat-toolbar>
+<mat-divider _ngcontent-ttx-c1="" class="mat-divider mat-divider-horizontal" style="background-color: #69f0ae;"
+  role="separator" aria-orientation="horizontal"></mat-divider>
+<button mat-raised-button (click)="downloadPDF()">download</button>
+<div class="content" id="content" #content>
+      <mat-card>
+        <div class="card-content-valign" style="padding: 16px;">
+           <canvas id="donetaskspermonth" style="height: 300px;width:600px;"></canvas>
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="card-content-valign">
+          <canvas id="tasksperproject" style="height: 300px;width:600px;"></canvas>
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="card-content-valign">
+            <canvas id="done_not_done" style="height: 300px;width:600px;"></canvas>
+        </div>
+      </mat-card>
+</div>
