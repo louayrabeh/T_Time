@@ -26,7 +26,7 @@
     "@fullcalendar/daygrid": "^4.4.0",
     "@types/jquery": "^3.3.38",
     "angular-material-event-calendar": "^0.1.4",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "jspdf": "^1.4.1",
